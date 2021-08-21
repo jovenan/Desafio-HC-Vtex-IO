@@ -1,0 +1,80 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  // Componentes do footer do site. Ambos utilizam o mesmo layout
+  "footer-layout.desktop": { 
+    "children": [
+      "flex-layout.row#footer"
+    ],
+    "props": {
+      "blockClass": "FooterPrincipalContainer"
+    }
+  },
+  "footer-layout.mobile": { 
+    "children": [
+      "flex-layout.row#footer"
+    ],
+    "props": {
+      "blockClass": "FooterPrincipalContainer"
+    }
+  },
+  // Componente que chama cada elemento do footer
+  "flex-layout.row#footer": { 
+    "children": [
+      "flex-layout.col#Entrar",
+      "flex-layout.col#Loja",
+      "flex-layout.col#Suporte"
+    ],
+    "props": {
+      "blockClass": "FooterPrincipal"
+    }
+  },
+  // Componente para ir para a página do formulario. É utilizado um componente customizavel nele.
+  "flex-layout.col#Entrar": {
+    "children": ["link.product#Formulario"],
+    "props": {
+      "blockClass": "ContainerInferiorEsquerda"
+    }
+  },
+  // Componente que leva para a página Home
+  "flex-layout.col#Loja": {
+    "children": ["link.product#Loja"],
+    "props": {
+      "blockClass": "ContainerInferiorCenter"
+    }
+  },
+  // Componente para entrar em contato pelo Whatsapp. É utilizado um componente customizavel nele.
+  "flex-layout.col#Suporte": {
+    "children": ["appwhatsapp"],
+    "props": {
+      "blockClass": "ContainerInferiorDireita"
+    }
+  },
+  "link.product#Loja": {
+    "children": ["image#Loja"],
+    "props": {
+      "href": "/"
+    }
+  },
+  "image#Loja": {
+    "props": {
+      "src": "https://img.icons8.com/ios/452/online-store.png",
+      "width": "45px",
+      "blockClass": "ImagensFooter"
+    }
+  },
+  "link.product#Formulario": {
+    "children": ["image#Formulario"],
+    "props": {
+      "href": "/formulario"
+    }
+  },
+  "image#Formulario": {
+    "props": {
+      "src": "https://image.flaticon.com/icons/png/512/753/753173.png",
+      "width": "45px",
+      "blockClass": "ImagensFooter"
+    }
+  }
+}

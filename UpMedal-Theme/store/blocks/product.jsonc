@@ -1,0 +1,62 @@
+{
+  "store.product": {
+    "children": [
+      "flex-layout.row#product-main"
+    ]
+  },
+  // Container Principal onde é passado todos os dados que devem ser puxados
+  "flex-layout.row#product-main": {
+    "children": [
+      "flex-layout.col#product-infos"
+    ],
+    "props": {
+      "blockClass": "containerPrincipal",
+      "horizontalAlign": "center"
+    }
+  },
+  // Layout onde é chamado cada item da página
+  "flex-layout.col#product-infos": {
+    "props": {
+      "width": "50%",
+      "rowGap": 0
+    },
+    "children": [
+      "product-images",
+      "flex-layout.row#productNameAndPrice",
+      "flex-layout.row#productQuantAndBuyButton",
+      "product-description"
+    ]
+  },
+  // Componente que renderiza o nome e preço do produto
+  "flex-layout.row#productNameAndPrice": {
+    "props": {
+      "marginTop": 5,
+      "marginBottom": 2
+    },
+    "children": [
+      "product-name",
+      "product-price"
+    ]
+  },
+  // Componente que renderiza a descrição do produto
+  "product-description": {
+    "props": {
+      "collapseContent": false,
+      "title": "DESCRIÇÃO"
+    }
+  },
+  // Componente que renderiza o botão de quantidade e o botão de comprar
+  "flex-layout.row#productQuantAndBuyButton": {
+    "children": [
+      "product-quantity",
+      "flex-layout.row#buy-button"
+    ]
+  },
+  "flex-layout.row#buy-button": {
+    "props": {
+      "marginTop": 5,
+      "marginBottom": 5
+    },
+    "children": ["buy-button"]
+  }
+}

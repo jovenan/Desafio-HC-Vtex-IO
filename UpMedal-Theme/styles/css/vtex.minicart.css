@@ -1,0 +1,13 @@
+.cartIcon {
+    color: #000;
+}
+.drawerContent {
+    z-index: 99999999;
+}
+.minicartSummary {
+    border-bottom: 2px solid #59FF00;
+    border-top: 2px solid #59FF00;
+}
+.minicartTitle {
+    border-bottom: 2px solid #59FF00;
+}

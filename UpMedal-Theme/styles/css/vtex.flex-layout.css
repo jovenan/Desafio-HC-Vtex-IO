@@ -1,0 +1,43 @@
+.flexRow--fundo {
+    background-color: #303030;
+}
+.flexRow--fundo2 {
+    background-color: #303030;
+    padding-top: 10%;
+}
+.flexRowContent--main-header-mobile {
+    background-color: #212121;
+}
+.flexRow--sticky-header-categorias :global(.vtex-store-components-3-x-container){
+    margin: 0; 
+    padding: 0;    
+}
+.flexRow--containerPrincipal {
+    background-color: #303030;
+    min-height: 100vh;
+    padding-bottom: 60px !important;
+}
+.flexRowContent--FooterPrincipal {
+    background-color: #212121;
+    display: flex;
+}
+.flexCol--ContainerInferiorCenter {
+    align-items: center;
+}
+.flexCol--ContainerInferiorEsquerda {
+    align-items: flex-end;
+}
+.flexCol--ContainerInferiorDireita {
+    align-items: flex-start;
+    background-color: #59FF00;
+    border-radius: 5px;
+    width: 45px !important;
+    height: 45px !important;
+}
+.flexRowContent--FooterPrincipal :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+    justify-content: left;
+}
+.flexRow--ContainerFormulario {
+    background-color: #303030;
+    min-height: 90vh;
+}

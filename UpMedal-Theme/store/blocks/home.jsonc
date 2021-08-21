@@ -1,0 +1,242 @@
+{
+  "store.home": { 
+    "blocks": [
+      "flex-layout.row#categorias"
+    ]
+  },
+  // Aqui é chamado a tab layout para fazer as abas de categorias no site.
+  "flex-layout.row#categorias": {
+    "props": {
+      "blockClass": "sticky-header-categorias"
+    },
+    "children": [
+      "tab-layout#categorias"
+    ]
+  },
+  "flex-layout.row#principal": {
+    "props": {
+      "blockClass": "fundo"
+    },
+    "children": [
+      "slider-layout#principal"
+    ]
+  },
+  // Slider principal da Home
+  "slider-layout#principal": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "blockClass": "carousel"
+    },
+    "children": [
+      "image#first",
+      "image#second"
+    ]
+  },
+  //Imagens do slider da Home
+  "image#first": {
+    "props": {
+      "src": "https://hiringcoders2021.vteximg.com.br/arquivos/imagemBanner2.png",
+      "blockClass": "imagemBanner",
+      "maxWidth": "1000px"
+    }
+  },
+  "image#second": {
+    "props": {
+      "src": "https://hiringcoders2021.vteximg.com.br/arquivos/imagemBanner1.png",
+      "blockClass": "imagemBanner",
+      "maxWidth": "1000px"
+    }
+  },
+  // Abaixo todos os layouts para puxar os produtos de todas as categorias, foram utilizados CustomQuerys
+  "flex-layout.row#TodosProdutos": {
+    "children": [
+      "search-result-layout.customQuery#Todos"
+    ],
+    "props": {
+      "blockClass": "fundo2"
+    }
+  },
+  "search-result-layout.customQuery#Todos": {
+    "props": {
+        "querySchema": {
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+            "queryField": "",
+            "mapField": "ft",
+            "skusFilter": "ALL_AVAILABLE"
+        }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home"
+    ]
+  },
+  "flex-layout.row#Corinthians": {
+    "children": [
+      "search-result-layout.customQuery#Corinthians"
+    ],
+    "props": {
+      "blockClass": "fundo2"
+    }
+  },
+  "search-result-layout.customQuery#Corinthians": {
+    "props": {
+        "querySchema": {
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+            "queryField": "Corinthians",
+            "mapField": "ft",
+            "skusFilter": "ALL_AVAILABLE"
+        }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home"
+    ]
+  },
+  "flex-layout.row#Palmeiras": {
+    "children": [
+      "search-result-layout.customQuery#Palmeiras"
+    ],
+    "props": {
+      "blockClass": "fundo2"
+    }
+  },
+  "search-result-layout.customQuery#Palmeiras": {
+    "props": {
+        "querySchema": {
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+            "queryField": "Palmeiras",
+            "mapField": "ft",
+            "skusFilter": "ALL_AVAILABLE"
+        }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home"
+    ]
+  },
+  "flex-layout.row#Etapas": {
+    "children": [
+      "search-result-layout.customQuery#Etapas"
+    ],
+    "props": {
+      "blockClass": "fundo2"
+    }
+  },
+  "search-result-layout.customQuery#Etapas": {
+    "props": {
+        "querySchema": {
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+            "queryField": "Etapa",
+            "mapField": "ft",
+            "skusFilter": "ALL_AVAILABLE"
+        }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home"
+    ]
+  },
+  "search-result-layout.desktop#home": {
+    "children": [
+      "flex-layout.row#resultsHome"
+    ]
+  },
+  "flex-layout.row#resultsHome": {
+    "children": [
+      "flex-layout.col#search"
+    ]
+  },
+  // Tab Layout com seus respectivos conteudos
+  "tab-layout#categorias": {
+    "children": [
+      "tab-list#categorias",
+      "tab-content#categorias"
+    ],
+    "props": {
+      "blockClass": "categorias",
+      "defaultActiveTabId": "Todos"
+    }
+  },
+  "tab-list#categorias": {
+    "children": [
+      "tab-list.item#Todos",
+      "tab-list.item#Corinthians",
+      "tab-list.item#Palmeiras",
+      "tab-list.item#Etapas"
+      ]
+  },
+  "tab-content#categorias": {
+    "children": [
+      "tab-content.item#Todos",
+      "tab-content.item#Corinthians",
+      "tab-content.item#Palmeiras",
+      "tab-content.item#Etapas"
+      ]
+  },
+  "tab-list.item#Todos": {
+    "props": {
+      "tabId": "Todos",
+      "label": "Todos",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#Corinthians": {
+    "props": {
+      "tabId": "Corinthians",
+      "label": "Corinthians"
+    }
+  },
+  "tab-list.item#Palmeiras": {
+    "props": {
+      "tabId": "Palmeiras",
+      "label": "Palmeiras"
+    }
+  },
+  "tab-list.item#Etapas": {
+    "props": {
+      "tabId": "Etapas",
+      "label": "Etapas"
+    }
+  },
+  "tab-content.item#Todos": {
+    "children": [
+      "flex-layout.row#principal",
+      "flex-layout.row#TodosProdutos"
+    ],
+    "props": {
+      "tabId": "Todos"
+    }
+  },
+  "tab-content.item#Corinthians": {
+    "children": [
+      "flex-layout.row#principal",
+      "flex-layout.row#Corinthians"
+    ],
+    "props": {
+      "tabId": "Corinthians"
+    }
+  },
+  "tab-content.item#Palmeiras": {
+    "children": [
+      "flex-layout.row#principal",
+      "flex-layout.row#Palmeiras"
+    ],
+    "props": {
+      "tabId": "Palmeiras"
+    }
+  },
+  "tab-content.item#Etapas": {
+    "children": [
+      "flex-layout.row#principal",
+      "flex-layout.row#Etapas"
+    ],
+    "props": {
+      "tabId": "Etapas"
+    }
+  }
+}

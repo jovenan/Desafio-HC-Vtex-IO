@@ -1,0 +1,20 @@
+.sliderArrows--carousel {
+    margin: 400px 23% 0;
+}
+.caretIcon--carousel {
+    width: 30px;
+}
+.paginationDotsContainer--carousel {
+    bottom: -15%;
+    width: 30%;
+    margin: 0 auto;
+}
+.paginationDot--carousel--isActive {
+    background-color: #59FF00;
+}
+.slideChildrenContainer--carousel {
+    background-color: #303030;
+}
+.sliderLayoutContainer--carousel {
+    background-color: #303030;
+}

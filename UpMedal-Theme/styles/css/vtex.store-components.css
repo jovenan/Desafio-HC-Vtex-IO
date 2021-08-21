@@ -1,0 +1,73 @@
+@media (max-width: 1024px) {
+    .imageElement--imagemBanner{
+        max-width: 600px !important;
+    }
+}
+@media (max-width: 768px) {
+    .logoImage {
+        width: 80px;
+    }
+    .imageElement--imagemBanner{
+        max-width: 300px !important;
+    }
+}
+.autoCompleteOuterContainer {
+    background-color: #212121;
+}
+.searchBarIcon--search {
+    margin: 0;
+}
+.searchBarContainer {
+    width: 50vw;
+}
+.container {
+    padding-top: 10px;
+    max-width: none;
+}
+.imageElement--imagemBanner{
+    border-radius: 15px;
+}
+.productImagesContainer--carousel, .productDescriptionContainer {
+    background-color: #424242;
+    border-radius: 10px;
+}
+.swiperCaret {
+    margin-top: 35%;
+}
+.caretIcon,
+.productBrand,
+.productDescriptionText {
+    color: #fff;
+}
+.swiperBullet--active {
+    color: #59FF00;
+}
+.price_className {
+    border-radius: 10px;
+    padding: 5px 3%;
+}
+.price_listPriceContainer,
+.price_sellingPriceContainer {
+    color: #000;
+}
+.productNameContainer {
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.productDescriptionContainer {
+    padding: 3%;
+}
+.productDescriptionTitle {
+    color: #59FF00;
+    border-bottom: 2px solid #59FF00;
+    width: fit-content;
+}
+.productDescriptionText {
+    line-height: 16px;
+    letter-spacing: .6px;
+}
+.imageElement--ImagensFooter {
+    background-color: #59FF00;
+    border-radius: 5px;
+}

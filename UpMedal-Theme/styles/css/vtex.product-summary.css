@@ -1,0 +1,39 @@
+.productNameContainer {
+    width: 100%;
+}
+.nameContainer,
+.productBrand {
+    padding: 4% 2%;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.price_listPriceContainer,
+.price_sellingPriceContainer,
+.price_installmentContainer {
+    color: #000;
+    text-align: center;
+    justify-content: center;
+}
+.productBrand {
+    font-size: 1rem;
+}
+:global(.vtex-product-summary-2-x-information) {
+    background-color: black;
+    justify-content: center;
+}
+:global(.vtex-store-components-3-x-priceContainer) {
+    width: 100%;
+    background-color: #59FF00;
+    color: black;
+    padding: 2% 0;
+    text-transform: uppercase;
+}
+:global(.vtex-store-components-3-x-sellingPrice) {
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+:global(.vtex-product-summary-2-x-element) {
+    padding: 0;
+}

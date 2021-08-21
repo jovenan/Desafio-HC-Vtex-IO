@@ -1,0 +1,102 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  // Componente que define o layout do header no Desktop. Foi utilizado um layout sticky para que ele fique fixo no topo da página
+  "header-layout.desktop": {
+    "children": [
+      "sticky-layout#desktop"
+    ]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#desktop"
+    ]
+  },
+  // Componentes de cada elemento do Header
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      "search-bar",
+      "flex-layout.col#spacer",
+      "minicart.v2"
+    ]
+  },
+  // Componente que insere um espaço no meio dos componentes
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  // Componente que chama a logo do site
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo"]
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://hiringcoders2021.vteximg.com.br/arquivos/upmedal.png",
+      "width": "160"
+    }
+  },
+  // Componente que define o layout do header no Mobile. Foi utilizado um layout sticky para que ele fique fixo no topo da página
+  "header-layout.mobile": {
+    "children": ["sticky-layout#mobile"]
+  },
+  "sticky-layout#mobile": {
+    "props": {
+      "blockClass": "sticky-header-mobile"
+    },
+    "children": [
+      "flex-layout.row#mobile"
+    ]
+  },
+  // Componente que chama a logo do site
+  "flex-layout.col#logo-mobile": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo"]
+  },
+  // Componentes de cada elemento do Header
+  "flex-layout.row#mobile": {
+    "children": [
+      "flex-layout.col#logo-mobile",
+      "flex-layout.col#spacer",
+      "search-bar",
+      "flex-layout.col#spacer",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  // Componente da barra de busca
+  "search-bar": {
+    "props": {
+      "placeholder": "BUSCAR",
+      "hasIconLeft": false
+    }
+  }
+}
