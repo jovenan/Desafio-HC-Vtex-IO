@@ -5,6 +5,12 @@
 
 Este projeto tem por finalidade simular um ecommerce simples contendo um carrosseis e prateleiras de produtos. Assim como páginas para produtos, categorias e uma página de formulario.
 
+### Tecnologias utilizadas
+
+- Vtex IO
+- React
+- Typescript
+
 ### Rodando localmente
 
 Para iniciar o desenvolvimento, é necessário clonar o projeto do Github em um diretório de sua preferência: 
